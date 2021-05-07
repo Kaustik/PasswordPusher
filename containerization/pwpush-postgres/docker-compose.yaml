@@ -1,4 +1,4 @@
-version: '2.1'
+version: '2'
 services:
 
   postgres:
@@ -6,15 +6,20 @@ services:
     volumes:
       - /var/lib/postgresql/data:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "127.0.0.1:5432:5432"
     environment:
       POSTGRES_USER: passwordpusher_user
       POSTGRES_PASSWORD: passwordpusher_passwd
       POSTGRES_DB: passwordpusher_db
 
   passwordpusher:
-    image: docker.io/pglombardo/pwpush-postgres:latest
+    image: infrakaustik/pwpush-postgres:latest
     ports:
       - "5000:5000"
+    environment:
+      RUBYOPT: "-W:no-deprecated"
+      EXPIRE_AFTER_DAYS_DEFAULT: 1
+      EXPIRE_AFTER_DAYS_MAX: 7
+      EXPIRE_AFTER_VIEWS_DEFAULT: 2
     depends_on:
       - postgres
