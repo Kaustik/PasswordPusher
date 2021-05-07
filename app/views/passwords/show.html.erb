@@ -1,3 +1,9 @@
+<p>
+  <div class='title'>
+  <img src="<%=asset_path("allevi.svg")%>" height="250" width="250" />
+  </div>
+</p>
+
 <p class='normal-yellow-font'>Your password is...</p>
 
 <div class='payload spoiler notranslate' id='pass' translate='no'>
@@ -8,25 +14,21 @@
 Copy to Clipboard
 </button>
 
-<p class='pwinstructions'>
-Please obtain and securely store this password elsewhere, ideally in a password manager.
-</p>
-
 <p>
 <% if @password.views_remaining == 0 %>
-    This secret link will be deleted in <%=pluralize(@password.days_remaining, 'day')%>
-     or 0 more views (this is the last view).
+    This secret link will be deleted in <span class='normal-yellow-font'><%=pluralize(@password.days_remaining, 'day')%></span>
+     or <span class='normal-yellow-font'>0 more views</span> (this is the last view).
 <% else %>
-    This secret link will be deleted in <%=pluralize(@password.days_remaining, 'day')%>
-     or <%=pluralize(@password.views_remaining, 'more view')%> (whichever occurs first).
+    This secret link will be deleted in <span class='normal-yellow-font'><%=pluralize(@password.days_remaining, 'day')%></span>
+     or <span class='normal-yellow-font'><%=pluralize(@password.views_remaining, 'more view')%></span> (whichever occurs first).
 <% end %>
 </p>
 
 <% if @password.deletable_by_viewer %>
     <p style='font-size: .85em;'>
     <a id="<%=@password.url_token%>"
-    data-confirm="This will expire this secret link and remove the password from the database forever.  Are you sure?"
+    data-confirm="This will expire this secret link and remove the password from the database forever. Are you sure?"
     rel="nofollow" data-method="delete"
-    href="<%=password_path%>">Nah. I've got it. Delete this secret link now.</a>
+    href="<%=password_path%>">Delete this secret link now.</a>
     </p>
 <% end %>

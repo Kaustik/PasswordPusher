@@ -42,12 +42,10 @@
 <body>
 <p>
   <div class='title'>
-  <span class='title'>Password Pusher</span>
-  <br/>
-  <span class='tagline'>Go Ahead.  Email Another Password.</span>
+  <img src="<%=asset_path("allevi.svg")%>" height="250" width="250" />
   </div>
 </p>
-<%= yield %> 
+<%= yield %>
 <%= render partial: 'shared/footer' %>
 <%= javascript_include_tag "application"%>
 </body>

@@ -7,7 +7,7 @@ html {
 
 body {
   text-align: center;
-  background: #000000;
+  background: #1E4650;
   font-family: "Crete Round", Tahoma, Georgia, Verdana, serif;
   color: #ddd;
   width: 95%;
@@ -33,27 +33,27 @@ article {
 }
 
 a:link, a:visited, a:active {
-  color: yellow;
+  color: #E18732;
   text-decoration: none;
 }
 
 a:hover {
-  color: #00CC00;
+  color: #E18732;
   text-decoration: none;
 }
 
 .normal-yellow-font {
-  color: yellow;
+  color: #E18732;
 }
 
 .medium-yellow-font {
   font-size: 2em;
-  color: yellow;
+  color: #E18732;
 }
 
 .large-yellow-font {
   font-size: 3em;
-  color: yellow;
+  color: #E18732;
 }
 
 .footer {

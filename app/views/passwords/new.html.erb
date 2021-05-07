@@ -16,8 +16,6 @@
     <span id='viewsrange'><%=EXPIRE_AFTER_VIEWS_DEFAULT%> Views</span>
     </p>
 
-    <br><span class='note'>(whichever comes first)</span></br>
-
     <% if DELETABLE_BY_VIEWER_PASSWORDS %>
     <p class='notes'>
         <%=check_box_tag "password[deletable_by_viewer]", nil, DELETABLE_BY_VIEWER_DEFAULT%>
@@ -26,24 +24,10 @@
     <% end %>
 
     <p>
-    <span>
-    <div class='cookie-save' id='cookie-save'>
-    <a href='#' onclick='saveExpirations()'>Save</a> these settings as
-    <i>default</i> in a browser cookie.
-    </div>
-    </span>
-    </p>
-
-    <p>
     <%=f.submit(:value => "Push it!", :class => "pushit", 'data-disable-with' => "Pushing...")%>
     </p>
 <% end %>
 
-<p class='notes'>
-<span class='tip'>
-* Tip: Only enter the password into the box.  Other identifying information can compromise security.
-</span>
-<p></p>
 <span class='note'>
 All passwords are encrypted prior to storage and are available to only those with the secret link.
 </span>
