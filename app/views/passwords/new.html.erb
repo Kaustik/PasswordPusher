@@ -5,6 +5,7 @@
 
     <p>
     Expire secret link and delete the stored password after:
+    </p>
 
     <p class='slider_box'>
     <%=range_field_tag("password_expire_after_days", EXPIRE_AFTER_DAYS_DEFAULT, {:name => "password[expire_after_days]", :class => "slider", :min => EXPIRE_AFTER_DAYS_MIN, :max => EXPIRE_AFTER_DAYS_MAX, :step => "1", :onchange => "showDaysValue(this.value)", :oninput => "showDaysValue(this.value)"})%>
