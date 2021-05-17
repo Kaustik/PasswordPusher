@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build containerization/pwpush-postgres -t infrakaustik/pwpush-postgres
+docker build --no-cache containerization/pwpush-postgres -t infrakaustik/pwpush-postgres
