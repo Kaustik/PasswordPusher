@@ -14,22 +14,28 @@ body {
   font-size: 16px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
   min-height: 100%;
 }
 
 body::after{ content:''; display:block; height:100px; }
 
-footer { 
+footer {
   position:absolute;
   text-align: center;
   margin-top: 2em;
   left: 0;
-  width:100%; 
-  height:100px; 
+  width:100%;
+  height:100px;
 }
 
 article {
   text-align: left;
+}
+
+div.title {
+  margin: 0 3em 3em 3em;
 }
 
 a:link, a:visited, a:active {
@@ -69,4 +75,77 @@ a:hover {
 .console {
   text-align: left;
   width: 100%;
+}
+
+
+/* För range-sliders, hyffsat Allevi-iga */
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+input[type="range"]:focus {
+  background: transparent;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #f5e6d7;
+  height: 6px;
+}
+
+input[type="range"]::-moz-range-track {
+  background: #f5e6d7;
+  height: 6px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 24px;
+  width: 24px;
+  background: #e18732;
+  margin-top: -5px;
+  border-radius: 50%;
+  border: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 24px;
+  width: 24px;
+  background: #e18732;
+  margin-top: -5px;
+  border-radius: 50%;
+  border: none;
+}
+
+p.payload .password {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+}
+
+.pushit {
+  border: none;
+  box-shadow: none;
+  font-family: "Crete Round", Tahoma, Georgia, Verdana, serif;
+}
+
+/* Checkbox-styling*/
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #f5e6d7;
+  height: 24px;
+  width: 24px;
+  margin-top: -1px;
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]:checked {
+  background: #e18732;
+  border: 2px solid #f5e6d7;
 }
