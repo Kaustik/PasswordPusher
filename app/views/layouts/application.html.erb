@@ -40,11 +40,9 @@
 </head>
 
 <body>
-<p>
-  <div class='title'>
+<div class='title'>
   <img src="<%=asset_path("allevi.svg")%>" height="250" width="250" />
-  </div>
-</p>
+</div>
 <%= yield %>
 <%= render partial: 'shared/footer' %>
 <%= javascript_include_tag "application"%>
