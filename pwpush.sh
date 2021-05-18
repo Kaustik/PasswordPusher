@@ -159,6 +159,3 @@ link=$(printf "%s\n" "${out[@]::${#out[@]}-1}" |jq -r '.url_token')
 echo -e "\nPassword: $passwd"
 echo "Password link: $base_url/p/$link"
 echo -e "\nThis link expires in ${opts[days]} days or ${opts[views]} views, whichever comes first."
-
-
-
