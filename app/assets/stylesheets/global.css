@@ -34,10 +34,6 @@ article {
   text-align: left;
 }
 
-div.title {
-  margin: 0 3em 3em 3em;
-}
-
 a:link, a:visited, a:active {
   color: #E18732;
   text-decoration: none;
