@@ -55,7 +55,6 @@ require "curl"
 require "openssl"
 
 base_url="https://pwpush.allevi.se"
-#base_url="http://yourls1.kaustik.tech:5000"
 
 # Parse command options and arguments from input.
 declare -A opts
